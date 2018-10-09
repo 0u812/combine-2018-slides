@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>The Tellurium Notebook Environment</title>
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">
+    
+<!--         <link rel="stylesheet" href="css/theme.css" id="theme"> -->
+        <link rel="stylesheet" href="bower_components/reveal.js/css/theme/solarized.css">
+        <link rel="stylesheet" href="css/overrides.css" id="theme-override">
+    
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="bower_components/highlightjs/styles/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'bower_components/reveal.js/css/print/pdf.css' : 'bower_components/reveal.js/css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="bower_components/reveal.js/lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <div class="slides">
+
+                
+                    
+                        
+    <section data-markdown="slides/index.md"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-markdown="slides/motivation.md"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-markdown="slides/workflow.md"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-markdown="slides/notebook-example.md"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-markdown="slides/tellurium-intro.md"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-markdown="slides/tellurium-components.md"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-markdown="slides/hello-world.md"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-markdown="slides/te-model-plot.md"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-markdown="slides/equation-demo.md"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-markdown="slides/syntax-breakdown.md"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-markdown="slides/comp-intro.md"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-markdown="slides/comp.md"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-markdown="slides/annotations.md"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-markdown="slides/future-directions.md"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-markdown="slides/acknowledgements.md"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-markdown="slides/further-reading.md"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-markdown="slides/errata.md"></section>
+
+
+                    
+                    
+                
+            </div>
+
+        </div>
+
+        <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+        <script src="bower_components/reveal.js/js/reveal.js"></script>
+        <script>
+
+          // Full list of configuration options available at:
+          // https://github.com/hakimel/reveal.js#configuration
+          Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [
+              { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+              { src: 'bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+              { src: 'bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+              { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( '[data-html]' ) || !!document.querySelector( 'pre code' ) || !!document.querySelector( '[data-markdown]' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
+              { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true },
+              { src: 'js/loadhtmlslides.js', condition: function() { return !!document.querySelector( '[data-html]' ); } }
+            ]
+          });
+
+        </script>
+          <script>
+            last_frag = null;
+            last_phantom = null;
+            Reveal.addEventListener( 'fragmentshown', function( event ) {
+              console.log('id',event.fragment.id,event.fragment.classList.contains('phantomfragment'));
+              if (event.fragment.classList.contains('viewmaster')) {
+                event.fragment.previous = last_frag;
+                last_frag = event.fragment;
+                if (event.fragment.previous) {
+                  event.fragment.previous.style.opacity = 0;
+                }
+                event.fragment.orig_transform = event.fragment.style.transform;
+                event.fragment.style.transform = 'none';
+              }
+              if (event.fragment.classList.contains('phantomfragment')) {
+                event.fragment.previous = last_phantom;
+                console.log('id',event.fragment.id,'previous',!!event.fragment.previous);
+                if (event.fragment.previous) {
+                  event.fragment.previous.style.opacity = 0;
+                }
+                last_phantom = event.fragment;
+              }
+            } );
+            Reveal.addEventListener( 'fragmenthidden', function( event ) {
+              if (event.fragment.classList.contains('viewmaster')) {
+                event.fragment.style.transform = event.fragment.orig_transform;
+                event.fragment.previous.style.opacity = 1;
+              }
+              if (event.fragment.classList.contains('phantomfragment')) {
+                if (event.fragment.previous) {
+                  event.fragment.previous.style.opacity = 1;
+                }
+              }
+            } );
+          </script>
+    </body>
+
+</html>

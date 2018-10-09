@@ -1,0 +1,49 @@
+/**
+ * JKM 2018
+ */
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.containercol {
+  flex: 1;
+  display: block;
+/*     display: table-cell; */
+/*     height: 400px; */
+  vertical-align: middle;
+/*   width: 1000px; */
+}
+
+.verticalcenter {
+  flex: 1;
+  display: block;
+/*     display: table-cell; */
+/*     height: 400px; */
+  vertical-align: middle;
+/*   width: 50px; */
+}
+
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+/*   vertical-align: baseline; */
+/*   opacity: 0.5; */
+}
+
+
+.reveal section img {
+  margin: none;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.reveal img {
+/*  max-width: none;
+  max-height: none;*/
+}
