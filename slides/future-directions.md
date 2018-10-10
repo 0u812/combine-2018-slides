@@ -1,6 +1,7 @@
 ##  Future directions
 
 <ul>
+  <li> SemGen integration (collab. with John Gennari) </li>
   <li> Cloud-based (e.g. AWS) support for compute-intensive tasks (active project) </li>
   <li class="fragment"> Upgrade to [Jupyter Lab](https://jupyterlab.readthedocs.io/en/stable/) </li>
   <li class="fragment"> Unified syntax for inline OMEX
