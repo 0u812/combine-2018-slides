@@ -19,7 +19,5 @@
 </div>
 
 note:
-    ∙ In our case, we just wanted to show the user the contents of the archive without requiring them to understand the different standards or where the boundaries are between them, we just wanted them to be able to edit the contents, simulate, and re-export to a COMBINE archive, and in this talk I'll show you a lot of examples to give you a feel for how we do that.
-    <br/>
-    ∙ In this example, we have a COMBINE archive with an SBML model and a SED-ML simulation, and we can import this archive into Tellurium, change any of the parameters, run the simulation and re-export to other tools. In the paper we demonstrated that the archives can be opened with iBioSim from Chris Myers' group and the SED-ML Web Tools by Frank Bergmann.
+    ∙ In our case, we translate the COMBINE archive into a human-readable representation that can be edited by users. We want to show the user the contents of the archive without requiring them to understand the different standards involved or where the boundaries are between them are. Then, we want the user to be able to run all the simulations described in the archive, be able to edit the contents, and finally re-export to a COMBINE archive which can be read by other tools, and in the paper that accompanies this we demonstrated the ability to export our archives to iBioSim by Myers group at Utah and the SED-ML Web Tools by Frank Bergmann.
     <br/>
