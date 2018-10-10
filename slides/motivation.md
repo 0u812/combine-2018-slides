@@ -18,11 +18,12 @@
     </ul>
   </div>
   <div class="containercol" style="flex-grow:1.5">
-    <img src="resources/combine-archive-file-types-plain.svg" style="width:70%;height:auto"/> 
+    <img src="resources/combine-archive-file-types-plain.svg" style="width:70%;height:auto"/>
   </div>
 </div>
 
 note:
-    This project was born out of the need to solve a problem related to COMBINE archives. For those who don't know COMBINE archives are designed to solve the problem of exchanging files when you have multiple standards. In COMBINE, there's not just one filetype, there are many types, like SBML, CellML, SED-ML, and moreover they're interdependent, so COMBINE archives are designed to packae all the interdependent parts together.
-    <br/>
-    ∙ COMBINE archives basically are containers for a bunch of standard types, and they solved the problem of exchangeability between different software tools, but they created a new problem: given a COMBINE archive, how do you display the information to the user? Do you break it up and group it by the type of standard?
+    ∙ So in order to talk about this project, we need to talk about COMBINE archives. For those who don't know, COMBINE archives were designed to solve the problem of exchanging standards between software tools. In this COMBINE umbrella organization, we have many different types of standards such as SBML, CellML, SED-ML, and the files encoded in these standards can be interdependent. So, when you have interdependent files like this, it's very difficult to manually exchange the collection of files between software tools. Instead, you can package the files in a COMBINE archive, which is a single file that the user sees on their desktop, but inside it contains all pertinent standard files to reproduce the study.<br/>
+    ∙ So, COMBINE archives solve the problem of exchangeability, but they create a problem of usability. In other words, given a COMBINE archive and all these diverse standards it contains, how do you display the information to the user and how to you allow them to edit the contents and re-export to a COMBINE archive?<br/>
+    ∙ Our project was motivated by the problem of allowing the user to author, edit and export COMBINE archives.
+

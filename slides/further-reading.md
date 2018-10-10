@@ -7,5 +7,4 @@ Choi et al. (2018) ["Tellurium: An extensible python-based modeling environment 
 [Tellurium homepage](http://tellurium.analogmachine.org/)
 
 note:
-    Put your speaker notes here.
-    You can see them pressing 's'.
+    ∙ SESSL provides inspiration for one way to expand SED-ML to provide generic capabilities.
